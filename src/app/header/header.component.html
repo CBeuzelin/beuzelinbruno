@@ -1,0 +1,38 @@
+<nav mat-tab-nav-bar>
+  <div
+    class="tab"
+    *ngFor="let navTab of navTabs"
+  >
+    <a
+      *ngIf="navTab.link"
+      mat-tab-link
+      routerLinkActive="active-tab"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="navTab.link"
+    >
+      {{ navTab.label }}
+    </a>
+
+    <div *ngIf="navTab.subTabs">
+      <div
+        mat-tab-link
+        [matMenuTriggerFor]="menu"
+        routerLinkActive="active-tab"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ navTab.label }}
+
+        <mat-menu #menu="matMenu" yPosition="above">
+          <a
+            *ngFor="let subTab of navTab.subTabs"
+            mat-tab-link
+            [routerLink]="subTab.link"
+          >
+            <button mat-menu-item>{{ subTab.label }}</button>
+          </a>
+
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</nav>

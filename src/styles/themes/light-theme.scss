@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+
+@import 'src/styles/palettes/light-palette';
+@import 'src/app/app.theme';
+
+.light-theme {
+  $theme: (
+    light-palette: $light-palette
+  );
+
+  @include app-theme($theme);
+}
+

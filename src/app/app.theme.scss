@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+@import 'header/header.theme';
+
+@mixin app-theme($theme) {
+  .background {
+    background-color: map.get($theme, light-palette, dark, 100);
+  }
+
+  .main {
+    background-color: map.get($theme, light-palette, light, 100);
+  }
+
+  @include header-theme($theme);
+}
