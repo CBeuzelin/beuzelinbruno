@@ -1,8 +1,14 @@
 $light-palette: (
   light: (
-    100: #ffffff
+    100: #ffffff,
+    200: #f2f2f2
   ),
   dark: (
-    100: #423f3f
+    100: #423f3f,
+    200: #474747,
+    300: #606060,
   ),
+  colored: (
+    red: #c92e2e,
+  )
 )

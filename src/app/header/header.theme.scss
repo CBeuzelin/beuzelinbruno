@@ -1,4 +1,29 @@
 @use 'sass:map';
 
 @mixin header-theme($theme) {
+  .subheader {
+    border-bottom: 1px solid map.get($theme, light-palette, light, 200);
+
+    &, & a {
+      color: map.get($theme, light-palette, dark, 200);
+    }
+
+    & a:hover {
+      color: map.get($theme, light-palette, colored, red);
+    }
+  }
+
+  .tab-label {
+    color: map.get($theme, light-palette, dark, 200);
+  }
+
+  .tab-link:hover, .tab-sublink:hover, .active-tab {
+    .tab-label {
+      color: map.get($theme, light-palette, colored, red);
+    }
+  }
+
+  .active-tab {
+    border-bottom-color: map.get($theme, light-palette, colored, red) !important;
+  }
 }

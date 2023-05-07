@@ -1,3 +1,86 @@
-.active-tab {
-  background-color: red !important;
+$subheader-height: 40px;
+$header-height: 64px;
+$transition-duration: 0.3s;
+
+.logo-link {
+  height: calc(#{$subheader-height} + #{$header-height});
+  flex-grow: 0 !important;
+
+  img {
+    margin: 4px 8px;
+    height: calc(100% - 8px);
+  }
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .subheader {
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+    height: calc(#{$subheader-height} - 1px);
+    font-size: 14px;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .subheader-content {
+      margin-top: 4px;
+    }
+
+    a {
+      transition: color $transition-duration;
+      text-transform: lowercase;
+    }
+  }
+
+  .header {
+    display: flex;
+
+    .mat-mdc-tab-link.mdc-tab {
+      height: $header-height !important;
+    }
+
+    .tab {
+      flex: 1;
+
+      .tab-link {
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color $transition-duration;
+      }
+    }
+
+    .tab-label {
+      display: flex;
+      gap: 8px;
+      transition: color $transition-duration;
+
+      & > span {
+        margin-top: 1px;
+      }
+    }
+  }
+}
+
+.sublink-menu {
+  max-width: unset !important;
+
+  & > .mdc-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .tab-sublink {
+    flex: 1;
+    padding: 0 16px;
+    margin: 0;
+    justify-content: left;
+  }
 }

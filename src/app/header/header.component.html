@@ -1,37 +1,74 @@
-<nav mat-tab-nav-bar>
-  <div
-    class="tab"
-    *ngFor="let navTab of navTabs"
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    class="logo-link"
+    [routerLink]="navTabs[0].link"
   >
-    <a
-      *ngIf="navTab.link"
-      mat-tab-link
-      routerLinkActive="active-tab"
-      [routerLinkActiveOptions]="{ exact: true }"
-      [routerLink]="navTab.link"
-    >
-      {{ navTab.label }}
-    </a>
+    <img src="assets/logo.png" alt="SARL Beuzelin Bruno - logo" />
+  </a>
 
-    <div *ngIf="navTab.subTabs">
+  <div class="header-container">
+    <div class="subheader font-subheader">
+      <div>
+        <mat-icon>call</mat-icon>
+        <span class="subheader-content">02 33 25 17 61</span>
+      </div>
+
+      <div>
+        <mat-icon>mail</mat-icon>
+        <a href="mailto:beuzelinbruno2@orange.fr" class="subheader-content">
+          beuzelinbruno2@orange.fr
+        </a>
+      </div>
+    </div>
+
+    <div class="header">
       <div
-        mat-tab-link
-        [matMenuTriggerFor]="menu"
-        routerLinkActive="active-tab"
-        [routerLinkActiveOptions]="{ exact: true }"
+        class="tab"
+        *ngFor="let navTab of navTabs"
       >
-        {{ navTab.label }}
+        <a
+          *ngIf="navTab.link"
+          mat-tab-link
+          routerLinkActive="active-tab"
+          class="tab-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="navTab.link"
+        >
+          <div class="tab-label font-header">
+            <span>{{ navTab.label }}</span>
+          </div>
+        </a>
 
-        <mat-menu #menu="matMenu" yPosition="above">
-          <a
-            *ngFor="let subTab of navTab.subTabs"
+        <div *ngIf="navTab.subTabs">
+          <div
             mat-tab-link
-            [routerLink]="subTab.link"
+            [matMenuTriggerFor]="menu"
+            routerLinkActive="active-tab"
+            class="tab-link"
+            [routerLinkActiveOptions]="{ exact: true }"
           >
-            <button mat-menu-item>{{ subTab.label }}</button>
-          </a>
+            <div class="tab-label font-header">
+              <span>{{ navTab.label }}</span>
 
-        </mat-menu>
+              <mat-icon>keyboard_arrow_down</mat-icon>
+            </div>
+
+            <mat-menu #menu="matMenu" yPosition="below" class="sublink-menu" [class]=theme>
+              <a
+                *ngFor="let subTab of navTab.subTabs"
+                mat-tab-link
+                routerLinkActive="active-tab"
+                class="tab-sublink"
+                [routerLink]="subTab.link"
+              >
+                <div class="tab-label font-subheader">
+                  <span>{{ subTab.label }}</span>
+                </div>
+              </a>
+
+            </mat-menu>
+          </div>
+        </div>
       </div>
     </div>
   </div>
