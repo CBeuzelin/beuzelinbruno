@@ -12,6 +12,19 @@
     background-color: map.get($theme, light-palette, light, 100);
   }
 
+  .page-container {
+    .text-container {
+      .title {
+        color: map.get($theme, light-palette, colored, emphasis);
+      }
+    }
+  }
+
+  button {
+    background-color: map.get($theme, light-palette, colored, emphasis);
+    color: map.get($theme, light-palette, light, 100);
+  }
+
   @include header-theme($theme);
   @include home-theme($theme);
 }

@@ -1,6 +1,4 @@
-$subheader-height: 40px;
-$header-height: 64px;
-$transition-duration: 0.3s;
+@import "src/styles/variables";
 
 .logo-link {
   height: calc(#{$subheader-height} + #{$header-height});
