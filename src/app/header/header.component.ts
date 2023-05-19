@@ -1,6 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { navTabs } from './resources/constants/nav-tab.constant';
-import { Router } from '@angular/router';
 import { MatTabNavPanel } from '@angular/material/tabs';
 
 @Component({
@@ -17,8 +16,7 @@ export class HeaderComponent {
   activeTab: string;
   public theme = 'light-theme';
 
-  constructor(private router: Router) {
-    console.log(this.router.getCurrentNavigation())
+  constructor() {
     this.activeTab = 'Accueil';
   }
 }

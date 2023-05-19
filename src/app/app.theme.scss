@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 @import 'header/header.theme';
+@import 'home/home.theme';
 
 @mixin app-theme($theme) {
   .background {
@@ -12,4 +13,5 @@
   }
 
   @include header-theme($theme);
+  @include home-theme($theme);
 }

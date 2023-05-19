@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { PlomberieSanitaireComponent } from './plomberie/plomberie-sanitaire/plomberie-sanitaire.component';
 import {
@@ -10,10 +9,11 @@ import { ChaudieresComponent } from './chauffage/chaudieres/chaudieres.component
 import { PompesAChaleurComponent } from './chauffage/pompes-a-chaleur/pompes-a-chaleur.component';
 import { ChauffageAuSolComponent } from './chauffage/chauffage-au-sol/chauffage-au-sol.component';
 import { PoelesComponent } from './chauffage/poeles/poeles.component';
+
 import { navLinks } from './header/resources/constants/nav-link.constant';
 
 const routes: Routes = [
-  { path: navLinks.home, component: HomeComponent },
+  { path: navLinks.home, loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   {
     path: navLinks.plomberie._,
     children: [

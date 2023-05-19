@@ -1,0 +1,7 @@
+@use 'sass:map';
+
+@mixin home-theme($theme) {
+  .carousel-container {
+    border-bottom-color: map.get($theme, light-palette, colored, red);
+  }
+}

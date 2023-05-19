@@ -1,4 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import IImage from "../shared/resources/interfaces/image.interface";
+
+import images from 'src/assets/img/home-carousel/';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +11,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent {
 
+  slides: IImage[];
+
+  constructor() {
+    this.slides = images;
+  }
 }
