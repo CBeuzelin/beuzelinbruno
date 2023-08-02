@@ -10,14 +10,21 @@
               alt="{{ slide.title }}"
               class="d-block w-100"
               loading="lazy" />
+            <c-carousel-caption class="d-none d-md-block">
+            <div class="carousel-slide-title-container">
+              <div class="carousel-slide-title">
+                <h3>{{slide.title}}</h3>
+              </div>
+            </div>
+            </c-carousel-caption>
           </c-carousel-item>
         </c-carousel-inner>
-        <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-        <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+        <c-carousel-control caption="Previous" direction="prev"></c-carousel-control>
+        <c-carousel-control caption="Next" direction="next"></c-carousel-control>
       </c-carousel>
     </div>
 
-    <div class="text-container">
+    <div class="text-container description-container">
       <div class="left-container">
         <h2 class="title">Chauffage, Sanitaires, Pompes à Chaleur : Services et disponibilité.</h2>
 

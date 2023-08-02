@@ -18,7 +18,7 @@ html, body, .theme {
 
   .text-container {
     display: flex;
-    padding: 32px 0 32px 64px;
+    padding: 32px 64px;
 
     .left-container {
       flex: 2;
@@ -34,6 +34,7 @@ html, body, .theme {
 
         p {
           margin: 0;
+          text-align: justify;
         }
       }
     }
@@ -58,5 +59,23 @@ button {
 
   &:hover {
     opacity: 0.7;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .page-container {
+    .text-container {
+      padding: 16px 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .page-container {
+    .text-container {
+      flex-direction: column;
+      gap: 24px;
+      padding: 8px 16px;
+    }
   }
 }

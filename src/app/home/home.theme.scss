@@ -4,6 +4,10 @@
 @mixin home-theme($theme) {
   .carousel-container {
     border-bottom-color: map.get($theme, light-palette, colored, emphasis);
+
+    .carousel-slide-title {
+      background-color: map.get($theme, light-palette, transparent, 300);
+    }
   }
 
   .section-container {
