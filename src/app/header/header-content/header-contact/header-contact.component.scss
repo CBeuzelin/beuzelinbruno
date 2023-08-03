@@ -1,0 +1,24 @@
+@import "src/styles/variables";
+
+.header-contact {
+  display: flex;
+  justify-content: space-around;
+  gap: 32px;
+  height: calc(#{$subheader-height} - 1px);
+  font-size: 14px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-contact-content {
+    margin-top: 4px;
+  }
+
+  a {
+    transition: color $transition-duration;
+    text-transform: lowercase;
+  }
+}

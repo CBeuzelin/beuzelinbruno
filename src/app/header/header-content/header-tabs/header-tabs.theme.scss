@@ -1,0 +1,17 @@
+@use 'sass:map';
+
+@mixin header-tabs-theme($theme) {
+  .tab-label {
+    color: map.get($theme, light-palette, dark, 200);
+  }
+
+  .tab-link:hover, .tab-sublink:hover, .active-tab {
+    .tab-label {
+      color: map.get($theme, light-palette, colored, emphasis);
+    }
+  }
+
+  .active-tab {
+    border-bottom-color: map.get($theme, light-palette, colored, emphasis) !important;
+  }
+}

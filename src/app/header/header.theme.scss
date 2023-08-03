@@ -1,29 +1,9 @@
 @use 'sass:map';
 
+@import "header-content/header-contact/header-contact.theme";
+@import "header-content/header-tabs/header-tabs.theme";
+
 @mixin header-theme($theme) {
-  .subheader {
-    border-bottom: 1px solid map.get($theme, light-palette, light, 200);
-
-    &, & a {
-      color: map.get($theme, light-palette, dark, 200);
-    }
-
-    & a:hover {
-      color: map.get($theme, light-palette, colored, emphasis);
-    }
-  }
-
-  .tab-label {
-    color: map.get($theme, light-palette, dark, 200);
-  }
-
-  .tab-link:hover, .tab-sublink:hover, .active-tab {
-    .tab-label {
-      color: map.get($theme, light-palette, colored, emphasis);
-    }
-  }
-
-  .active-tab {
-    border-bottom-color: map.get($theme, light-palette, colored, emphasis) !important;
-  }
+  @include header-contact-theme($theme);
+  @include header-tabs-theme($theme);
 }

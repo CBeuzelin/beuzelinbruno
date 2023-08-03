@@ -1,22 +1,18 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { navTabs } from './resources/constants/nav-tab.constant';
+import { Component, Input } from '@angular/core';
 import { MatTabNavPanel } from '@angular/material/tabs';
+import { EResponsiveClass } from '../shared/resources/enums/responsive-class.enum';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   @Input()
   public tabPanel: MatTabNavPanel | undefined;
 
-  navTabs = navTabs;
-  activeTab: string;
-  public theme = 'light-theme';
+  @Input()
+  public responsive: EResponsiveClass | undefined;
 
-  constructor() {
-    this.activeTab = 'Accueil';
-  }
+  public eResponsiveClass = EResponsiveClass;
 }

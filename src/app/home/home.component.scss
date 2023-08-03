@@ -63,13 +63,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .page-container .section-container {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 750px) {
+.handset-portrait {
   .page-container {
     .description-container {
       padding-right: 16px;

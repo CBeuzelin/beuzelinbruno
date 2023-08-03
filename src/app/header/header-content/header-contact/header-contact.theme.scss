@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+@mixin header-contact-theme($theme) {
+  .header-contact {
+    border-bottom: 1px solid map.get($theme, light-palette, light, 200);
+
+    &, & a {
+      color: map.get($theme, light-palette, dark, 200);
+    }
+
+    & a:hover {
+      color: map.get($theme, light-palette, colored, emphasis);
+    }
+  }
+}

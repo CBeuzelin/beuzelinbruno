@@ -1,0 +1,48 @@
+@import "src/styles/variables";
+
+.header-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: none;
+  padding: 0;
+
+  .mat-mdc-tab-link.mdc-tab {
+    height: $header-height !important;
+  }
+
+  .tab {
+    flex: 1;
+
+    .tab-link {
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color $transition-duration;
+    }
+  }
+
+  .tab-label {
+    display: flex;
+    gap: 8px;
+    transition: color $transition-duration;
+
+    & > span {
+      margin-top: 1px;
+    }
+  }
+}
+
+.sublink-menu {
+  max-width: unset !important;
+
+  & > .mdc-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .tab-sublink {
+    flex: 1;
+    padding: 0 16px;
+    margin: 0;
+    justify-content: left;
+  }
+}

@@ -1,7 +1,7 @@
-<div class="theme" [class]=theme>
+<div class="theme" [class]="[theme, responsive]">
   <div class="background">
     <div class="main">
-      <app-header [tabPanel]="tabPanel"></app-header>
+      <app-header [tabPanel]="tabPanel" [responsive]="responsive"></app-header>
 
       <mat-tab-nav-panel #tabPanel>
         <router-outlet></router-outlet>

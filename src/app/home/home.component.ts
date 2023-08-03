@@ -62,5 +62,5 @@ export class HomeComponent {
         { text: 'Station de distribution privée de carburant', links: [] }
       ]
     }
-  ]
+  ];
 }

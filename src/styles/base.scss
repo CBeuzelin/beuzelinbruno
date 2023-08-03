@@ -62,19 +62,19 @@ button {
   }
 }
 
-@media screen and (max-width: 1000px) {
+.tablet-portrait, .handset-portrait {
   .page-container {
     .text-container {
+      flex-direction: column;
+      gap: 24px;
       padding: 16px 32px;
     }
   }
 }
 
-@media screen and (max-width: 750px) {
+.handset-portrait {
   .page-container {
     .text-container {
-      flex-direction: column;
-      gap: 24px;
       padding: 8px 16px;
     }
   }
