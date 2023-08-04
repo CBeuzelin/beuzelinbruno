@@ -1,4 +1,4 @@
-<div [ngSwitch]=responsive>
+<div [ngSwitch]=responsive class="header">
   <app-header-web *ngSwitchCase=eResponsiveClass.WEB_LANDSCAPE [tabPanel]=tabPanel></app-header-web>
 
   <app-header-handset *ngSwitchCase=eResponsiveClass.HANDSET_PORTRAIT [tabPanel]=tabPanel>

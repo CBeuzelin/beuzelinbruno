@@ -1,0 +1,12 @@
+@import "src/styles/variables";
+
+.header {
+  padding: 0;
+
+  app-header-web, app-header-tablet, app-header-handset {
+    &, & > nav, .mat-mdc-tab-links, .header-container {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

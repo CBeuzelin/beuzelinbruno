@@ -1,1 +1,10 @@
-<p>header-tablet works!</p>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <div class="header-container">
+    <div class="subheader-container">
+      <app-header-logo class="logo"></app-header-logo>
+      <app-header-contact></app-header-contact>
+    </div>
+
+    <app-header-tabs></app-header-tabs>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+@import "src/styles/variables";
+@import "resources/styles/web-tablet-portrait";
+
+.page-container {
+  height: calc(100vh - (#{$subheader-height} + #{$header-height})) !important;
+}
+
+.tablet-portrait, .web-portrait {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+
+    .subheader-container {
+      height: $subheader-height;
+      display: flex;
+
+      app-header-logo {
+        max-width: calc(#{$subheader-height} * #{$logo-ratio});
+      }
+
+      app-header-contact {
+        flex-grow: 1;
+      }
+    }
+
+    app-header-tabs {
+      height: $header-height;
+    }
+  }
+}

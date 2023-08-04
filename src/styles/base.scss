@@ -10,8 +10,6 @@ html, body, .theme {
 }
 
 .page-container {
-  height: calc(100vh - (#{$subheader-height} + #{$header-height})) !important;
-
   a {
     text-decoration: none;
   }

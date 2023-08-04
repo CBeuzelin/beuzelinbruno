@@ -1,7 +1,29 @@
 @import "src/styles/variables";
+@import "resources/styles/web-landscape";
 
-.header-container {
+.page-container {
+  height: calc(100vh - (#{$subheader-height} + #{$header-height})) !important;
+}
+
+.web-landscape .header-container {
   display: flex;
-  flex-direction: column;
-  flex: 1;
+
+  app-header-logo {
+    height: calc(#{$subheader-height} + #{$header-height});
+    max-width: calc((#{$subheader-height} + #{$header-height}) * #{$logo-ratio});
+  }
+
+  .subheader-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    app-header-contact {
+      height: calc(#{$subheader-height} - 1px);
+    }
+
+    app-header-tabs {
+      height: calc(#{$header-height} - 1px);
+    }
+  }
 }

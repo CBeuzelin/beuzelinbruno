@@ -5,9 +5,10 @@
   flex-wrap: nowrap;
   border-bottom: none;
   padding: 0;
+  height: 100%;
 
   .mat-mdc-tab-link.mdc-tab {
-    height: $header-height !important;
+    height: 100% !important;
   }
 
   .tab {
@@ -19,8 +20,13 @@
     }
   }
 
+  .ng-star-inserted {
+    height: 100%;
+  }
+
   .tab-label {
     display: flex;
+    align-items: center;
     gap: 8px;
     transition: color $transition-duration;
 
@@ -44,5 +50,25 @@
     padding: 0 16px;
     margin: 0;
     justify-content: left;
+  }
+}
+
+.web-portrait {
+  .font-header {
+    font-size: 20px;
+  }
+}
+
+.tablet-portrait {
+  .mdc-tab {
+    padding: 0 20px;
+
+    .tab-label {
+      margin-top: 2px;
+    }
+
+    .font-header {
+      font-size: 16px;
+    }
   }
 }

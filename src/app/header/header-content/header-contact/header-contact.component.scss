@@ -2,9 +2,9 @@
 
 .header-contact {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 32px;
-  height: calc(#{$subheader-height} - 1px);
+  height: 100%;
   font-size: 14px;
 
   & > div {
