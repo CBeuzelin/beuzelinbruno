@@ -1,6 +1,10 @@
 .carousel-container {
   margin-top: 16px;
   border-bottom: 4px solid;
+
+  .carousel-title {
+    text-shadow: 2px 2px 20px #000000;
+  }
 }
 
 .section-container {

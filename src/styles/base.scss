@@ -11,6 +11,8 @@ html, body, .theme {
 
 .page-container {
   height: calc(100vh - (#{$subheader-height} + #{$header-height})) !important;
+  display: flex;
+  flex-direction: column;
 
   a {
     text-decoration: none;
@@ -59,4 +61,8 @@ button {
   &:hover {
     opacity: 0.7;
   }
+}
+
+.bold {
+  font-weight: bold;
 }

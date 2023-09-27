@@ -2,6 +2,7 @@
 
 @import 'header/header.theme';
 @import 'home/home.theme';
+@import 'footer/footer.theme';
 
 @mixin app-theme($theme) {
   .background {
@@ -27,4 +28,5 @@
 
   @include header-theme($theme);
   @include home-theme($theme);
+  @include footer-theme($theme);
 }

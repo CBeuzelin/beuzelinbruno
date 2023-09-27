@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './header/header.module';
 import { MatTabsModule } from '@angular/material/tabs';
+import {NgScrollbarModule} from "ngx-scrollbar";
+import {FooterModule} from "./footer/footer.module";
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     AppRoutingModule,
     HeaderModule,
     MatTabsModule,
+    NgScrollbarModule,
+    FooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

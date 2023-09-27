@@ -1,68 +1,70 @@
-<div class="page-container home">
-  <ng-scrollbar class="page-container" [visibility]="'hover'">
-    <div class="carousel-container">
-      <c-carousel [interval]=3000>
-        <c-carousel-indicators></c-carousel-indicators>
-        <c-carousel-inner>
-          <c-carousel-item *ngFor="let slide of slides">
-            <img
-              [src]="slide.src"
-              alt="{{ slide.title }}"
-              class="d-block w-100"
-              loading="lazy" />
-          </c-carousel-item>
-        </c-carousel-inner>
-        <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-        <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
-      </c-carousel>
-    </div>
+<div class="home">
+  <div class="carousel-container">
+    <c-carousel [interval]=3000>
+      <c-carousel-indicators></c-carousel-indicators>
+      <c-carousel-inner>
+        <c-carousel-item *ngFor="let slide of slides">
+          <img
+            [src]="slide.src"
+            alt="{{ slide.title }}"
+            class="d-block w-100"
+            loading="lazy" />
 
-    <div class="text-container">
-      <div class="left-container">
-        <h2 class="title">Chauffage, Sanitaires, Pompes à Chaleur : Services et disponibilité.</h2>
+          <c-carousel-caption class="d-none d-md-block carousel-title">
+            <h3>{{ slide.title }}</h3>
+          </c-carousel-caption>
+        </c-carousel-item>
+      </c-carousel-inner>
+      <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+      <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+    </c-carousel>
+  </div>
 
-        <div class="text-content">
-          <p>
-            Depuis plus de 50 ans l’entreprise Beuzelin Bruno, située à Saint-Langis-lès-Mortagne dans le département de l’Orne, est à votre service dans le domaine du chauffage, des sanitaires, des énergies renouvelables et des chauffages de piscines.
-          </p>
+  <div class="text-container">
+    <div class="left-container">
+      <h2 class="title">Chauffage, Sanitaires, Pompes à Chaleur : Services et disponibilité.</h2>
 
-          <p>
-            Notre équipe de professionnels, spécialisée dans la condensation depuis plus de quinze ans, s’occupe de l’installation et de l’entretien de tous vos systèmes de chauffage tels que le fuel, le gaz, le solaire, les pompes à chaleur air/air et air/eau et la géothermie.
-          </p>
+      <div class="text-content">
+        <p>
+          Depuis plus de 50 ans l’entreprise Beuzelin Bruno, située à Saint-Langis-lès-Mortagne dans le département de l’Orne, est à votre service dans le domaine du chauffage, des sanitaires, des énergies renouvelables et des chauffages de piscines.
+        </p>
 
-          <p>
-            Nous réalisons également vos salles de bains : douche, baignoire, lavabo, WC, meubles, balnéo, spa, hammam…
-          </p>
-        </div>
-      </div>
+        <p>
+          Notre équipe de professionnels, spécialisée dans la condensation depuis plus de quinze ans, s’occupe de l’installation et de l’entretien de tous vos systèmes de chauffage tels que le fuel, le gaz, le solaire, les pompes à chaleur air/air et air/eau et la géothermie.
+        </p>
 
-      <div class="right-container">
-        <a [routerLink]="contactLink">
-          <button type="button">
-            <mat-icon>mail</mat-icon>
-            <span>Contactez-nous</span>
-          </button>
-        </a>
+        <p>
+          Nous réalisons également vos salles de bains : douche, baignoire, lavabo, WC, meubles, balnéo, spa, hammam…
+        </p>
       </div>
     </div>
 
-    <div class="text-container section-container">
-      <div class="section" *ngFor="let section of sections">
-        <div class="title">
-          <mat-icon class="icon">{{ section.icon }}</mat-icon>
-          <h3>{{ section.title }}</h3>
-        </div>
+    <div class="right-container">
+      <a [routerLink]="contactLink">
+        <button type="button">
+          <mat-icon>mail</mat-icon>
+          <span>Contactez-nous</span>
+        </button>
+      </a>
+    </div>
+  </div>
 
-        <div class="text" *ngFor="let paragraph of section.paragraphs">
-          <div>
-            {{ paragraph.text }}
-            <span *ngFor="let link of paragraph.links, let i = index">
+  <div class="text-container section-container">
+    <div class="section" *ngFor="let section of sections">
+      <div class="title">
+        <mat-icon class="icon">{{ section.icon }}</mat-icon>
+        <h3>{{ section.title }}</h3>
+      </div>
+
+      <div class="text" *ngFor="let paragraph of section.paragraphs">
+        <div>
+          {{ paragraph.text }}
+          <span *ngFor="let link of paragraph.links, let i = index">
               <a [href]="link.url">{{ link.label }}</a>
               <span *ngIf="i !== paragraph.links.length - 1">,&nbsp;</span>
             </span>
-          </div>
         </div>
       </div>
     </div>
-  </ng-scrollbar>
+  </div>
 </div>
